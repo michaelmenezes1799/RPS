@@ -7,12 +7,42 @@
     <title>Document</title>
 </head>
 <body>
+    
+    
+    <div class="buttonContainer">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    
     <script>
         
         let computer = 0;
         let player = 0;
-        let playerHand;
-        let playerHandValid;
+                
+        const rock = document.querySelector("#rock");
+        const paper = document.querySelector("#paper");
+        const scissors = document.querySelector("#scissors");
+        rock.addEventListener ('click', () => {
+            
+            let PlayerHand = "rock";
+            oneRound("rock");
+        
+        });
+        paper.addEventListener ('click', () => {
+            
+            PlayerHand = "paper";
+            oneRound("paper");
+        
+        });
+        scissors.addEventListener ('click', () => {
+            
+            PlayerHand = "scissors";
+            oneRound("scissors");
+        
+        });
+
+
         function computerPlay()
         {
             
@@ -33,16 +63,9 @@
                         return computerHand;
                     }
         }
-       function oneRound()
+       function oneRound(playerHand)
        { 
-        do {
-        playerHandValid = prompt('rock paper scissors! Declare your move!');
-        playerHand = playerHandValid.toLowerCase();
-        if (playerHand != 'rock' && playerHand != 'paper' && playerHand != 'scissors')
-        {
-            alert("Check your spelling! Invalid input: " + playerHand);
-        }
-        } while (playerHand != 'rock' && playerHand != 'paper' && playerHand != 'scissors');
+       
         let computerHand = computerPlay();
         
         if (computerHand == 'rock' && playerHand == 'rock' || computerHand == 'paper' && playerHand == 'paper' || computerHand == 'scissors' && playerHand == 'scissors')
@@ -63,32 +86,11 @@
                 player++;
             }
        }
-       
-       function match()
-       {      
-        while(computer != 5 || player !=5)
-        {
-        oneRound();
-        console.log("score:\nComputer: " + computer + "\nPlayer: " + player);
-        if (computer == 5)
-            {
-                console.log("The computer has won the match! Game Over!");
-                return;
-            }
-            else if (player == 5)
-            {
-                console.log("You won the match! Game Over!");
-                return;
-            }
-       }
-       
-    }
-
-    match();
-
-
-
-
+    
+    
+    
+    
+    
     </script>
 </body>
 </html>
