@@ -1,0 +1,64 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(sandybrown, white);
+    
+}
+.mainContainer {
+    padding: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: darkgrey;
+    flex-direction: column;
+    opacity: 80%;
+    border-radius: 40px;
+    flex: 0 0 0;
+}
+
+.scoreContainer {
+    background-color: blanchedalmond;
+    display: flex;
+    outline: 2px solid black; 
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.playerScore,.compScore {
+    outline: 2px solid black;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: darkgray;
+    opacity: 80%;
+}
+.playerPoint,.compPoint{
+    font-size: 40px;
+}
+.announcement {
+    background-color: blanchedalmond;
+    padding: 5px;
+    margin-top: 20px;
+    outline: 2px solid black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.buttonContainer {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    
+}
+
+
